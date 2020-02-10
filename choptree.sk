@@ -1,0 +1,19 @@
+#여기는 주석입니다. VSC로 써봅니다.
+#simply chop tree
+
+on break of log:
+    if block 1 down event-block is dirt:
+        set {_while} to true
+        set {_log} to block 0 up event-block
+
+        while {_while} is true:
+            if {_log} is log:
+                break block 0 up location of {_log}
+                play sound "BLOCK_WOOD_BREAK" with volume 1 and pitch 1 at player
+                set {_log} to block 1 up location of {_log}
+            wait 0.3 seconds
+
+on command hello:
+  trigger:
+    if sender is player:
+      send "&aHello World!"
