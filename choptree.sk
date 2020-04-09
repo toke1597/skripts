@@ -12,8 +12,3 @@ on break of log:
                 play sound "BLOCK_WOOD_BREAK" with volume 1 and pitch 1 at player
                 set {_log} to block 1 up location of {_log}
             wait 0.3 seconds
-
-on command hello:
-  trigger:
-    if sender is player:
-      send "&aHello World!"
